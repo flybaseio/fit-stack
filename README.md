@@ -1,5 +1,5 @@
-# fit-stack
 The FIT Stack - Flybase / Interface / Thin Servers
+-----
 
 The FIT Stack allows for building rapid MVPs, it's set up so you can choose a full-stack version with Node.js as the backend, or the client-side version which is frontend only.
 
@@ -13,3 +13,9 @@ The choice is yours, and the possibilities are endless!
 
 * [full-stack (with node)](https://github.com/flybaseio/fit-stack/tree/full-stack)
 * [client-side only](https://github.com/flybaseio/fit-stack/tree/client-side)
+
+***
+
+You can [read this article](http://mvpin30.com/2015/06/29/fit-stack/) on [MVPin30](http://mvpin30.com) for a description of the FIT Stack and it's benefits and uses.
+
+We make heavy use of the FIT Stack here at Flybase, and wanted to share it with you.
