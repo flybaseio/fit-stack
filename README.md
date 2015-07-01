@@ -7,5 +7,5 @@ The frontend code is the same for both, the full-stack just features the ability
 
 ## Branches
 
-* [full-stack (with node)][full-stack]
+* [full-stack (with node)](https://github.com/flybaseio/fit-stack/tree/full-stack)
 * [client-side only](https://github.com/flybaseio/fit-stack/tree/client-side)
