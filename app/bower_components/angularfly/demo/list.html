@@ -1,0 +1,20 @@
+<h3>Projects list</h3>
+<table class="table table-striped table-bordered table-hover">
+<thead>
+<tr>
+	<th>name</th>
+	<th>site</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="project in projects" ng-click="edit(project)">
+	<td>{{project.name}}</td>
+	<td>{{project.site}}</td>
+	<td><a ng-href="#/edit/{{project.$id()}}"><i class="glyphicon glyphicon-edit"></i></a></td>
+</tr>
+</tbody> 
+</table>
+<div class="well">
+	<a class="btn btn-default" ng-href="#/new">New project</a>
+</div>

@@ -1,0 +1,50 @@
+{
+  "name": "angularfly",
+  "description": "The officially supported AngularJS binding for Flybase",
+  "version": "1.0.2",
+  "authors": [
+    "Data McFly <support@datamcfly.com> (https://www.datamcfly.com/)"
+  ],
+  "homepage": "https://github.com/flybaseio/angularfly",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flybaseio/angularfly.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "flybase",
+    "datamcfly",
+    "realtime"
+  ],
+  "main": "angularfly.js",
+  "ignore": [
+    "**/.*",
+    "src",
+    "tests",
+    "node_modules",
+    "bower_components",
+    "flybase.json",
+    "datamcfly.json",
+    "package.json",
+    "Gruntfile.js",
+    "changelog.txt"
+  ],
+  "dependencies": {
+    "angular": "1.2.x || 1.3.x",
+    "flybase": "~1.4.4"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.3.11"
+  },
+  "_release": "1.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.2",
+    "commit": "668e7761e926ce172f171b271b381975fceb5b29"
+  },
+  "_source": "git://github.com/flybaseio/angularfly.git",
+  "_target": "*",
+  "_originalSource": "angularfly"
+}

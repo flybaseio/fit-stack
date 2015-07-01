@@ -1,0 +1,15 @@
+<div class="container">
+	<article>
+		<div class="page-header">
+			<h3>
+				{{project.name}}
+				<span class="badge" ng-show="project.tag">
+					<i class="glyphicon glyphicon-tags"></i> &nbsp; {{project.tag}}
+				</span>
+			</h3>
+		</div>
+		<div class="entry">
+			<render-html html="project.description"></render-html>
+		</div>
+	</article>
+</div>

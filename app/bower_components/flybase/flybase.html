@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="flybase.js"></script>
+	</head>
+	<body>
+		<script>
+		$(function(){
+			var myApp = new Flybase('YOUR_API_KEY','YOUR-APP','YOUR-COLLECTION');
+
+			//list documents
+			myApp.listDocuments(function(data){
+				console.log('List Documents : ', data.value() );
+			});
+
+			//insert documents
+			// myApp.push({JSLIBTEST : 'testing'}, function(data){
+			// 	console.log('Insert Documents : ', data.value() );
+			// });
+
+			//delete document
+			myApp.deleteDocument('50285146e4b0bd0b0bbb328a', function(data){
+				console.log('Delete Document : ', data.value() );
+			});
+		});
+		</script>
+	</body>
+</html>
