@@ -8,4 +8,4 @@ The frontend code is the same for both, the full-stack just features the ability
 ## Branches
 
 * [full-stack (with node)][full-stack]
-* [client-side only][client-side]
+* [client-side only](https://github.com/flybaseio/fit-stack/tree/client-side)
