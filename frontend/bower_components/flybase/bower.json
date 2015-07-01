@@ -1,0 +1,26 @@
+{
+	"name": "flybase",
+	"version": "1.4.5",
+	"homepage": "http://flybase.io",
+	"authors": [
+		"Data McFly <operations@datamcfly.com>"
+	],
+	"description": "Flybase Web Client",
+	"main": "flybase.js",
+	"keywords": [
+		"Flybase",
+		"Data McFly",
+		"synchronization",
+		"real-time",
+		"websocket"
+	],
+	"license": "MIT",
+	"private": false,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}

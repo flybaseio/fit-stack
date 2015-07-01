@@ -1,0 +1,96 @@
+<!doctype html>
+<!--  
+
+    88888888o.                 .                                                                 
+    888    888               .o8                                              .ooooooo.   oooo   oooo  oooo
+    888    888   888888o.  .o888oo    888880.  ooo. .oo.  .oo.    .o88888o.   888         `888   `888  888'
+    888    888        888    888          888  `888P"Y88bP"Y88b   888         888oooo      888    `888888'
+    888    888  .o8888888    888    .o8888888   888   888   888   888         888          888      `888'
+    888    888  888   888    888 .  888   888   888   888   888   888         888          888       88'   .o.
+    888888888'  `Y8bod8P'    "888"  `Y8bod8P'  o888o o888o o888o  `Y8bod8P'  o888o        o888o     88'    Y8P     
+
+                                                                                                                -->
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Fit Stack (Client Side)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base ng-href="/">
+	
+	<!-- CSS -->
+	<link ng-href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<link ng-href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" ng-href="bower_components/medium-editor/dist/css/medium-editor.css">
+    <link rel="stylesheet" ng-href="bower_components/medium-editor/dist/css/themes/default.css">
+	<link rel="stylesheet" ng-href="css/app.css"> <!-- custom styles -->
+
+	<!-- JS -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="components/forge.min.js"></script>
+</head>
+<body ng-cloak>
+	<div class="container">
+		<!-- HEADER -->
+		<nav class="navbar navbar-inverse">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" ng-href="#/">Fit Stack</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a ng-href="#/">home</a></li>
+					<li><a ng-href="#/api-test">API Test</a></li>
+					<li ng-show-auth><a ng-href="#/projects">Projects</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li ng-hide-auth>
+						<div style="margin:8px;"><a class="btn btn-success" ng-href="#/login">Login</a></div>
+					</li>
+					<li ng-show-auth><a ng-href="#/account">Account</a></li>
+					<li ng-show-auth><a ng-href="#/account/edit">My Profile</a></li>
+					<li ng-show-auth><div style="margin:8px;"><a class="btn btn-danger" ng-href="#/logout">Logout</a></div></li>
+				</ul>
+			</div>
+		</nav>
+		<!--[if lt IE 7]>
+		<p class="browsehappy">
+		You are using an <strong>outdated</strong> browser. Please <a ng-href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+		</p>
+		<![endif]-->	
+		<div ng-view></div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted">Fit Stack v<span app-version></span></p>
+		</div>
+	</footer>
+	<!-- JS -->
+	<script src="bower_components/flybase/flybase.js"></script>
+	<script src="bower_components/angularfly/angularfly.js"></script>
+    <script src="bower_components/medium-editor/dist/js/medium-editor.js"></script>
+	<script src="bower_components/angular-medium-editor/dist/angular-medium-editor.min.js"></script>
+		
+	<!-- ANGULAR STUFF -->
+	<script src="config.js"></script>
+<!-- SERVICES -->
+	<script src="components/directives.js"></script>
+	<script src="components/APIService.js"></script>
+	<script src="components/models.js"></script>
+	<script src="components/loginMcFly.js"></script>
+<!-- CONTROLLERS -->
+	<script src="home/home.js"></script>
+	<script src="account/account.js"></script>
+	<script src="api-test/apitest.js"></script>
+	<script src="projects/projects.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<h3>View</h3>
+<table class="table table-striped table-bordered table-hover">
+<tbody>
+<tr>
+	<th>Name</th>
+	<td>
+		{{project.name}}
+		<span class="badge" ng-show="project.tag">
+			<i class="glyphicon glyphicon-tags"></i> &nbsp; {{project.tag}}
+		</span>
+	</td>
+</tr>
+<tr>
+	<th>Project</th>
+	<td>{{project.project}}</td>
+</tr>
+</tbody> 
+</table>
+<div class="well">
+	<a class="btn btn-warning" ng-href="#/projects">Go Back</a>
+	<a class="btn btn-primary" ng-href="#/projects/edit/{{project.$id()}}">Edit</a>
+</div>

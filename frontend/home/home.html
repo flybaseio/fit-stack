@@ -1,0 +1,18 @@
+<div class="list-group"  ng-repeat="project in projects">
+	<div class="list-group-item">
+		<a ng-href="#/project/{{project.$id()}}">
+			<h4 class="list-group-item-heading">
+				{{project.name}}
+				<span class="badge" ng-show="project.tag">
+					<i class="glyphicon glyphicon-tags"></i> &nbsp; {{project.tag}}
+				</span>
+			</h4>
+		</a>
+	</div>
+	<br />
+	<div ng-if="$index % 3 == 0" class="list-group-item list-group-item-info">
+		<p>
+			<a href="http://twitter.com/flybaseio">Follow us on Twitter!</a>
+		</p>
+	</div>
+</div>
