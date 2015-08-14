@@ -14,6 +14,20 @@ The choice is yours, and the possibilities are endless!
 * [full-stack (with node)](https://github.com/flybaseio/fit-stack/tree/full-stack)
 * [client-side only](https://github.com/flybaseio/fit-stack/tree/client-side)
 
+## Getting Started
+
+You can perform a git clone of any specific branch using the following command:
+
+```
+git clone https://github.com/flybaseio/fit-stack -b client-side --single-branch mynewproject
+```
+
+This will clone the `client-side` branch of the FIT stack to a new folder called `mynewproject` and from there you can build your new apps.
+
+Similarly, replacing `client-side` with `full-stack` will clone the `full-stack` branch.
+
+We use this framework to build our apps, including the flybase.io dashboard, so this is a framework we put a lot of work into.
+
 ***
 
 You can [read this article](http://mvpin30.com/2015/06/29/fit-stack/) on [MVPin30](http://mvpin30.com) for a description of the FIT Stack and it's benefits and uses.
