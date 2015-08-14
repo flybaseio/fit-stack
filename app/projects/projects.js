@@ -1,4 +1,4 @@
-angular.module('TodoCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly','angular-medium-editor'])
+angular.module('TodoCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 /* Controllers */
 .controller('TodoListCtrl', function($scope, $rootScope, $timeout, $location, $route, projects,login,Project) {
 	if( !login.isLoggedIn() ){
