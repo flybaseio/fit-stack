@@ -1,5 +1,5 @@
 {
-  "name": "mcfly-stack",
+  "name": "fit-stack",
   "version": "1.0.0",
   "dependencies": {
     "bootstrap": "latest",
@@ -7,14 +7,10 @@
     "angular-route": "latest",
     "angular-loader": "latest",
     "flybase": "~1.4.1",
-    "angularfly": "latest",
-    "angular-medium-editor": "~0.0.6",
-    "medium-editor": "~3.0.0",
-    "medium-editor-insert-plugin": "^1.0"
+    "angularfly": "latest"
   },
   "resolutions": {
     "flybase": "~1.4.1",
-    "medium-editor": "~3.0.0",
-    "angular": "1.4.1"
+    "angular": "1.4.4"
   }
 }

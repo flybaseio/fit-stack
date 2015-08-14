@@ -13,7 +13,7 @@
 // Declare app level module which depends on filters, and services
 angular.module('myApp', [
 	'myApp.config',
-	'APIService'
+	'APIService',
 	'myApp.models',
 	"UserCtrl",
 	'MainCtrl', 
