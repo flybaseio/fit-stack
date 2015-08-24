@@ -10,7 +10,7 @@ var Flybase = function(apiKey, database, collection){
 	this.sessionId;
 
 	this.apiUrl = 'https://api.flybase.io';
-	this.pushUrl = 'http://push.flybase.io';
+	this.pushUrl = 'https://push.flybase.io';
 	
 	return this.start();
 };
@@ -200,7 +200,17 @@ Flybase.prototype.on = function( key, callback ){
 				var data = self.processData( res );
 				self.currentItem = data;
 			}else{
-				var data = res;
+				var IS_JSON = true;
+				try{
+					var json = JSON.parse( res );
+				}catch(err){
+					IS_JSON = false;
+				}
+				if( IS_JSON ){
+					var data = json;
+				}else{
+					var data = res;
+				}
 			}
 			callback( data );
 		});
@@ -219,7 +229,17 @@ Flybase.prototype.once = function( key, callback ){
 				var data = self.processData( res );
 				self.currentItem = data;
 			}else{
-				var data = res;
+				var IS_JSON = true;
+				try{
+					var json = JSON.parse( res );
+				}catch(err){
+					IS_JSON = false;
+				}
+				if( IS_JSON ){
+					var data = json;
+				}else{
+					var data = res;
+				}
 			}
 			callback( data );
 			return true;
@@ -229,12 +249,19 @@ Flybase.prototype.once = function( key, callback ){
 
 //	Send message to notification server...
 Flybase.prototype.trigger = function(event, message){
+	if( typeof message === 'object' ){
+		var message = JSON.stringify( message );
+	}
 	var url = this.pushUrl+'/emit/' + this.room + '/' + event + '/' + message;
 	var req = new XMLHttpRequest();
 	req.open('GET', url, true);
 	req.send(  );
 };
+
 Flybase.prototype.emit  = function(event, message) {
+	if( typeof message === 'object' ){
+		var message = JSON.stringify( message );
+	}
 	var url = this.pushUrl+'/emit/' + this.room +  '/' + event + '/' + message;
 	var req = new XMLHttpRequest();
 	req.open('GET', url, true);
@@ -407,7 +434,7 @@ Flybase.prototype.request = function(url, type){
 		"Accept": "application/json;text/plain",
 		"X-Flybase-API-Key": this.apiKey,
 		"X-Flybase-API-Signature": signature,
-		"X-Flybase-API-Timestamp": timestamp
+		"X-DataMCFly-API-Timestamp": timestamp
 	};
 
 	var self = this;
