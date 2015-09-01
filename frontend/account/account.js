@@ -38,6 +38,7 @@ angular.module('UserCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 
 	$scope.login = function(email, pass) {
 		$scope.err = null;
+		pass = pass.toSHA1();
 		login.login(email, pass).then(function(/* user */) {
 			$location.path('/account');
 		}, function(err) {
@@ -48,7 +49,9 @@ angular.module('UserCtrl', ['ngRoute', 'flybaseResourceHttp', 'loginMcFly'])
 	$scope.createAccount = function() {
 		$scope.err = null;
 		if( assertValidAccountProps() ) {
-			login.createAccount($scope.email, $scope.pass).then(function(/* user */) {
+			var pass = $scope.pass;
+			pass = pass.toSHA1();
+			login.createAccount($scope.email, pass).then(function(/* user */) {
 				$location.path('/account');
 			}, function(err) {
 				$scope.err = err;
