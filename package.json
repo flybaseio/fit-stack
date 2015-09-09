@@ -8,14 +8,15 @@
     "angular"
   ],
   "dependencies": {
-    "body-parser": "^1.4.3",
-    "express": "^4.5.1",
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
     "firebase-token-generator": "^0.1.4",
-    "flybase": "^1.5.9",
-    "method-override": "^2.0.2",
+    "flybase": "^1.6.2",
+    "method-override": "^2.3.5",
+    "packer": "0.0.6",
     "passport": "^0.2.2",
     "shelljs": "^0.5.3",
-    "underscore": "^1.5.2"
+    "underscore": "^1.8.3"
   },
   "engines": {
     "node": ">= 0.12.x"

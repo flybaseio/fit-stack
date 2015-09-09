@@ -1,4 +1,6 @@
-module.exports = function(app, config, mcConfig) {
+var packer = require('packer');
+
+module.exports = function(app, config, flyConfig) {
 	// server routes ===========================================================
 	// handle things like api calls
 	app.get('/api', function(req, res) {
@@ -20,6 +22,33 @@ module.exports = function(app, config, mcConfig) {
 		res.json( songs );
 	});
 
+	/*
+		we generate this file dynamically, and then pack it, that way we have less files to have to mess with.
+	*/
+	app.get('/config.js', function(req, res){
+		res.type('application/javascript');
+		var data = "'use strict';\n" + 
+"angular.module('myApp.config', [])\n" +
+".constant('version', '1.0.1')\n" +
+".constant('loginRedirectPath', '/login')\n" +
+".constant('SERVER_CONFIG', {url: '/api'} )\n" +
+".constant('FLYBASE_CONFIG',{\n" +
+"	API_KEY:'" + flyConfig.api_key + "',\n" +
+"	DB_NAME:'" + flyConfig.app_name + "'\n" +
+"})\n" +
+".run(['FLYBASE_CONFIG', '$timeout', function(FLYBASE_CONFIG, $timeout) {\n" +
+"	if( FLYBASE_CONFIG.API_KEY.match('YOUR-API-KEY') ) {\n" +
+"		angular.element(document.body).html('<div class=container><h1>Please configure <code>config/flybase.js</code> before running!</h1></div>');\n" +
+"		$timeout(function() {\n" +
+"			angular.element(document.body).removeClass('hide');\n" +
+"		}, 250);\n" +
+"	}\n" +
+"	}]);";
+		var data = packer.pack(data, true);
+		res.send(200, data );
+	});
+
+	
 	// frontend routes =========================================================
 	// route to handle all angular requests
 	app.get('*', function(req, res) {
