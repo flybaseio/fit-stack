@@ -32,4 +32,6 @@ We use this framework to build our apps, including the flybase.io dashboard, so 
 
 You can [read this article](http://mvpin30.com/2015/06/29/fit-stack/) on [MVPin30](http://mvpin30.com) for a description of the FIT Stack and it's benefits and uses.
 
+We also blog about it here on the [Flybase blog](http://blog.flybase.io/tags/code), with posts such as [http://blog.flybase.io/2015/09/02/kilo-fitness-flybase-angular](http://blog.flybase.io/2015/09/02/kilo-fitness-flybase-angular)
+
 We make heavy use of the FIT Stack here at Flybase, and wanted to share it with you.
