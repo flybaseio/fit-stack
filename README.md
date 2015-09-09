@@ -29,3 +29,13 @@ The Fit Stack is:
 The FIT Stack is a powerful, but lightweight Angular.js and Flybase driven stack for making quick and powerful MVP projects as part of the [MVPin30](http://mvpin30.com) project.
 
 Using the power of Angular.js, and Flybase, we can quickly build MVPs of new ideas and host them anywhere, even on static web hosts such as Github Pages.
+
+## How to run the code
+
+1. Clone the repo: `$ git clone https://github.com/flybaseio/fit-stack.git -b client-side --single-branch new-project` 
+2. `$ cd new-project`
+3. `$ npm install -g bower serve`
+4. `$ bower install`
+4. `$ cd app/`
+5. `$ serve`
+5. View in browser at `http://localhost:3000`
