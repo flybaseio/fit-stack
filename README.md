@@ -11,8 +11,8 @@ The choice is yours, and the possibilities are endless!
 
 ## Branches
 
-* [full-stack (with node)](https://github.com/flybaseio/fit-stack/tree/full-stack)
-* [client-side only](https://github.com/flybaseio/fit-stack/tree/client-side)
+* [full-stack (with node)](https://github.com/flybaseio/fit-stack/tree/full-stack), this is set up so you can build your FIT Stack app with integration between frontend via Angular.js and backend via Node.js. This lets you quickly build out your MVP.
+* [client-side only](https://github.com/flybaseio/fit-stack/tree/client-side), this is a client-side only implementation using Angular.js and Flybase. You can then host your site on static hosting services such as Github Pages without need of a server, since Flybase handles all of the backend.
 
 ## Getting Started
 
