@@ -28,8 +28,8 @@ The Fit Stack is:
 
 ## How to run the code
 
-1. Clone the repo: `$ git clone https://github.com/flybaseio/fit-stack.git` 
-2. `$ cd docuvent`
+1. Clone the repo: `$ git clone https://github.com/flybaseio/fit-stack.git -b full-stack --single-branch new-project` 
+2. `$ cd new-project`
 3. `$ npm install`
 4. `$ bower install`
 4. `$ node server.js`
