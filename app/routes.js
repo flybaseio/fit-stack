@@ -1,4 +1,4 @@
-var packer = require('packer');
+var packer = require('./packer');
 
 module.exports = function(app, config, flyConfig) {
 	// server routes ===========================================================
@@ -45,14 +45,14 @@ module.exports = function(app, config, flyConfig) {
 "	}\n" +
 "	}]);";
 		var data = packer.pack(data, true);
-		res.send(200, data );
+		res.status(200).send( data );
 	});
 
 	
 	// frontend routes =========================================================
 	// route to handle all angular requests
 	app.get('*', function(req, res) {
-		res.sendfile('./frontend/index.html');
+		res.sendFile('./frontend/index.html');
 	});
 
 };
