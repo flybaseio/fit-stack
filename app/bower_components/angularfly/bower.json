@@ -1,7 +1,7 @@
 {
 	"name": "angularfly",
 	"description": "The officially supported AngularJS binding for Flybase",
-	"version": "1.0.2",
+	"version": "1.0.4",
 	"authors": [
 		"Data McFly <support@datamcfly.com> (https://www.datamcfly.com/)"
 	],

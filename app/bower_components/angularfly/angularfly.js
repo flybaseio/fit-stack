@@ -4,8 +4,8 @@ angular.module('flybaseResourceHttp', [])
 	function DflybaseResourceFactory(collectionName) {
 
 		var config = angular.extend({
-			BASE_URL: 'http://api.flybase.io/databases/',
-			PUSH_URL: 'http://push.flybase.io/',
+			BASE_URL: 'https://api.flybase.io/databases/',
+			PUSH_URL: 'https://push.flybase.io/',
 		}, FLYBASE_CONFIG);
 
 		var dbUrl = config.BASE_URL + config.DB_NAME;
