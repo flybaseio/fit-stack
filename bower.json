@@ -10,7 +10,6 @@
     "angularfly": "latest"
   },
   "resolutions": {
-    "flybase": "~1.4.1",
     "angular": "1.4.4"
   }
 }
